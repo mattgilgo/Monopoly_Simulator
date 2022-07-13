@@ -70,11 +70,18 @@ class Turn(Player):
         elif space.space_type == "FreeParking":
             amount_in_fp = self.monopoly_board.free_parking
             self.player.money = self.player.money + amount_in_fp
+            self.monopoly_board.free_parking = 0
         elif space.space_type == "Tax":
             owed_tax = space.rent
             self.monopoly_board.free_parking += owed_tax
             self.player.money -= owed_tax
-        
+        elif space.space_type == "Go":
+            self.player.money += 200
+        elif space.space_type == "Jail":
+            self.player.location = 9
+        elif space.space_type == "Chance":
+            
+
         # Code logic for passing Go, going to Jail, landing on Chance, and landing on Community Chest
         # Also add logic to remove player if they run out of money
             ## From this, they can mortgage property
