@@ -80,9 +80,9 @@ class Turn(Player):
         elif space.space_type == "Jail":
             self.player.location = 9
         elif space.space_type == "Chance":
-            
 
-        # Code logic for passing Go, going to Jail, landing on Chance, and landing on Community Chest
+
+        # Code logic for landing on Chance, and landing on Community Chest
         # Also add logic to remove player if they run out of money
             ## From this, they can mortgage property
             ## If all properties are mortgaged and they still run out: 
